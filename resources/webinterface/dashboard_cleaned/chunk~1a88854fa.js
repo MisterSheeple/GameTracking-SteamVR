@@ -727,6 +727,7 @@ var CLSTAMP = "steamdb";
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       }),
         (function (_) {
           (_[(_.Invalid = 0)] = "Invalid"),
@@ -1231,7 +1232,7 @@ var CLSTAMP = "steamdb";
               "NoDeadZoneThenSmallElastic");
         })(_ || (_ = {}));
       const _ = _.SmallDeadZone;
-      var _, _, _, _, _, _;
+      var _, _, _, _, _, _, _;
       !(function (_) {
         (_[(_.Rect = 0)] = "Rect"),
           (_[(_.Panorama = 1)] = "Panorama"),
@@ -1243,6 +1244,10 @@ var CLSTAMP = "steamdb";
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.Default = 0)] = "Default"), (_[(_.Aurora = 1)] = "Aurora");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Default = 0)] = "Default"),
+            (_[(_.Sensitive = 1)] = "Sensitive");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.ECameraExposure_Unknown = 0)] = "ECameraExposure_Unknown"),

@@ -1476,7 +1476,7 @@ var CLSTAMP = "steamdb";
                 "NoDeadZoneThenSmallElastic");
           })(_ || (_ = {}));
         const _ = _.SmallDeadZone;
-        var _, _, _, _, _, _;
+        var _, _, _, _, _, _, _;
         function _(_, _) {
           let _ = _.getAttribute(_);
           if (_ && _.length > 0) {
@@ -1760,6 +1760,10 @@ var CLSTAMP = "steamdb";
           })(_ || (_ = {})),
           (function (_) {
             (_[(_.Default = 0)] = "Default"), (_[(_.Aurora = 1)] = "Aurora");
+          })(_ || (_ = {})),
+          (function (_) {
+            (_[(_.Default = 0)] = "Default"),
+              (_[(_.Sensitive = 1)] = "Sensitive");
           })(_ || (_ = {})),
           (function (_) {
             (_[(_.ECameraExposure_Unknown = 0)] = "ECameraExposure_Unknown"),
@@ -10121,9 +10125,8 @@ var CLSTAMP = "steamdb";
           _ = 413080,
           _ = 4161800,
           _ = 202355,
-          _ = "steam.app.",
-          _ = _ + _,
-          _ = _ + _,
+          _ = "steam.app." + _,
+          _ = "steam.app." + _,
           _ = "system.dashboard.quicklaunch",
           _ = "system.dashboard.nowplaying",
           _ = "system.desktop",
@@ -10184,6 +10187,7 @@ var CLSTAMP = "steamdb";
           _ = "/steam/oobe",
           _ = "/steamvr/fakeoobe",
           _ = "/steam/guidedtour",
+          _ = "/steam/streamingtodevice",
           _ = "/settings/perfcheck/drawPerfCriteriaOverlay",
           _ = "/user/head",
           _ = "/user/hand/left",
@@ -10488,7 +10492,7 @@ var CLSTAMP = "steamdb";
             return "CVRGamepadUIShared_Action";
           }
         }
-        var _, _, _, _, _, _, _, _, _, _, _;
+        var _, _, _, _, _, _, _, _, _, _, _, _;
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -11595,6 +11599,147 @@ var CLSTAMP = "steamdb";
         (window.VRPathProperties =
           null !== (_ = window.VRPathProperties) && void 0 !== _ ? _ : []),
           window.VRPathProperties.push(_);
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.indicators || _(_._()),
+              _.Message.initialize(this, _, 0, -1, [1], null);
+          }
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    indicators: {
+                      _: 1,
+                      _: _,
+                      _: !0,
+                      _: !0,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CVRGamepadUIShared_PathProperty_PeripheralIndicators";
+          }
+          static getVRPathPropertyKey() {
+            return "/vrgamepadui/steamvr/peripheral_indicators";
+          }
+          getVRPathPropertyKey() {
+            return _.getVRPathPropertyKey();
+          }
+          static shouldUnsetVRPathPropertyOnSteamClose() {
+            return !1;
+          }
+          shouldUnsetVRPathPropertyOnSteamClose() {
+            return _.shouldUnsetVRPathPropertyOnSteamClose();
+          }
+        }
+        (window.VRPathProperties =
+          null !== (_ = window.VRPathProperties) && void 0 !== _ ? _ : []),
+          window.VRPathProperties.push(_);
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.type || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    type: {
+                      _: 1,
+                      _: _.readEnum,
+                      _: _.writeEnum,
+                    },
+                    is_suppressed: {
+                      _: 2,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CVRGamepadUIShared_PathProperty_PeripheralIndicators_Indicator";
+          }
+        }
         class _ extends _.Message {
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
@@ -17855,15 +18000,9 @@ var CLSTAMP = "steamdb";
             return this.m_sceneAppKey;
           }
           get SceneAppID() {
-            var _;
-            if (
-              !(null === (_ = this.SceneAppKey) || void 0 === _
-                ? void 0
-                : _.startsWith(_))
-            )
-              return;
-            const _ = Number.parseInt(this.SceneAppKey.substring(10));
-            return Number.isInteger(_) ? _ : void 0;
+            return null === VRHTML || void 0 === VRHTML
+              ? void 0
+              : VRHTML.VRUtil.BAppIdFromSteamAppKey(this.SceneAppKey);
           }
           get SceneAppIsHome() {
             return this.m_sceneAppKey == _;
@@ -19765,7 +19904,7 @@ var CLSTAMP = "steamdb";
                       _: 17,
                       _: _,
                     },
-                    sort_order: {
+                    special_sort_behavior: {
                       _: 14,
                       _: _.readEnum,
                       _: _.writeEnum,
@@ -21745,6 +21884,112 @@ var CLSTAMP = "steamdb";
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
+              _.prototype.indicator || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    indicator: {
+                      _: 1,
+                      _: _.readEnum,
+                      _: _.writeEnum,
+                    },
+                    suppressed: {
+                      _: 2,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CVRGamepadUI_Message_SetPeripheralIndicatorSuppressed_Request";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _
+              ? {
+                  $jspbMessageInstance: _,
+                }
+              : {};
+          }
+          static fromObject(_) {
+            return new _();
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _;
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {}
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CVRGamepadUI_Message_SetPeripheralIndicatorSuppressed_Response";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
               _.prototype.url || _(_._()),
               _.Message.initialize(this, _, 0, -1, void 0, null);
           }
@@ -22563,6 +22808,112 @@ var CLSTAMP = "steamdb";
             return "CVRGamepadUI_Message_ShowPowerMenu_Response";
           }
         }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.app_id || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    app_id: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    prefers_steam_input: {
+                      _: 2,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CVRGamepadUI_Message_SetAppVRInputPreference_Request";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _
+              ? {
+                  $jspbMessageInstance: _,
+                }
+              : {};
+          }
+          static fromObject(_) {
+            return new _();
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _;
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {}
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CVRGamepadUI_Message_SetAppVRInputPreference_Response";
+          }
+        }
         const _ = {
           "DashboardTabClicked#1": {
             msgClassRequest_t: _,
@@ -22659,6 +23010,11 @@ var CLSTAMP = "steamdb";
             msgClassResponse_t: _,
             strMethod: "SetSpatializeSurroundEnabled",
           },
+          "SetPeripheralIndicatorSuppressed#1": {
+            msgClassRequest_t: _,
+            msgClassResponse_t: _,
+            strMethod: "SetPeripheralIndicatorSuppressed",
+          },
         };
         class _ {
           constructor(_) {
@@ -22669,7 +23025,9 @@ var CLSTAMP = "steamdb";
               (this.GetAppIcon = this.GetAppIcon.bind(this)),
               (this.RequestAppQuit = this.RequestAppQuit.bind(this)),
               (this.NavigateInstance = this.NavigateInstance.bind(this)),
-              (this.ShowPowerMenu = this.ShowPowerMenu.bind(this));
+              (this.ShowPowerMenu = this.ShowPowerMenu.bind(this)),
+              (this.SetAppVRInputPreference =
+                this.SetAppVRInputPreference.bind(this));
           }
           ExecuteSteamURL(_, _) {
             return this.m_Client.SendVRGamepadUIRequest(
@@ -22722,6 +23080,14 @@ var CLSTAMP = "steamdb";
           ShowPowerMenu(_, _) {
             return this.m_Client.SendVRGamepadUIRequest(
               "ShowPowerMenu#1",
+              _.fromObject(null != _ ? _ : {}),
+              _,
+              _,
+            );
+          }
+          SetAppVRInputPreference(_, _) {
+            return this.m_Client.SendVRGamepadUIRequest(
+              "SetAppVRInputPreference#1",
               _.fromObject(null != _ ? _ : {}),
               _,
               _,
@@ -30169,10 +30535,14 @@ var CLSTAMP = "steamdb";
           }
           SaveCurrentBinding(_, _, _) {
             return (0, _._)(this, void 0, void 0, function* () {
+              var _;
               this.HasUnboundActions,
                 (this.m_sName = _),
                 (this.m_sDescription = _);
-              let _ = this.m_sInteractionProfile.trim(),
+              let _ =
+                  null === (_ = this.m_sInteractionProfile) || void 0 === _
+                    ? void 0
+                    : _.trim(),
                 _ = {
                   app_key: this.SelectedApp,
                   controller_type:
@@ -32966,6 +33336,8 @@ var CLSTAMP = "steamdb";
               (this.m_mailbox = new _()),
               (this.m_routeObservingAutorunDisposer = null),
               (this.m_refAppSelectDropdown = _.createRef()),
+              (this.m_sceneAppInputPreferenceAppIdListener = null),
+              (this.m_sceneAppPrefersSteamInputListener = null),
               (this.state = {
                 currentBindingApp: null,
                 currentControllerType: _.GetBestControllerType(),
@@ -32982,6 +33354,14 @@ var CLSTAMP = "steamdb";
               (this.setState({
                 currentControllerType: _.GetBestControllerType(),
               }),
+              (this.m_sceneAppInputPreferenceAppIdListener =
+                _.ListenToInt32PathProperty(
+                  "/steam/scene_app_input_preference/app_id",
+                )),
+              (this.m_sceneAppPrefersSteamInputListener =
+                _.ListenToBooleanPathProperty(
+                  "/steam/scene_app_input_preference/prefers_steam_input",
+                )),
               (this.m_bindingSubscriptionChangedCanaryDisposer = (0, _.observe)(
                 _,
                 "BindingSubscriptionChangedCanary",
@@ -33005,12 +33385,21 @@ var CLSTAMP = "steamdb";
             }
           }
           componentWillUnmount() {
+            var _, _;
             this.m_bindingSubscriptionChangedCanaryDisposer &&
               (this.m_bindingSubscriptionChangedCanaryDisposer(),
               (this.m_bindingSubscriptionChangedCanaryDisposer = null)),
               this.m_routeObservingAutorunDisposer &&
                 (this.m_routeObservingAutorunDisposer(),
-                (this.m_routeObservingAutorunDisposer = null));
+                (this.m_routeObservingAutorunDisposer = null)),
+              null === (_ = this.m_sceneAppInputPreferenceAppIdListener) ||
+                void 0 === _ ||
+                _.unregister(),
+              (this.m_sceneAppInputPreferenceAppIdListener = null),
+              null === (_ = this.m_sceneAppPrefersSteamInputListener) ||
+                void 0 === _ ||
+                _.unregister(),
+              (this.m_sceneAppPrefersSteamInputListener = null);
           }
           static OpenDeepLink(_, _) {
             _.setRoute(_, _.PAGE_SECTION, _ ? [_] : null),
@@ -33063,6 +33452,7 @@ var CLSTAMP = "steamdb";
                   rCurrentBindingList: null,
                   bForceToggleToCustom: !1,
                 });
+              const _ = _.GetAppSettings(_.key).catch(() => null);
               let _ = yield this.loadAppActionManifest(_.key);
               if (
                 (this.setState({
@@ -33071,9 +33461,9 @@ var CLSTAMP = "steamdb";
                 }),
                 _.supports_dominant_hand_setting)
               ) {
-                let _ = yield _.GetAppSettings(_.key);
+                let _ = yield _;
                 this.setState({
-                  eDominantHand: _.dominant_hand,
+                  eDominantHand: null == _ ? void 0 : _.dominant_hand,
                 });
               } else
                 this.setState({
@@ -33182,6 +33572,35 @@ var CLSTAMP = "steamdb";
                 eDominantHand: _,
               });
           }
+          get supportsVRGamepadMode() {
+            return (
+              !!VRHTML &&
+              (!!VRHTML.VRProperties.GetBoolProperty(
+                _,
+                _.Prop_SupportsVRGamepadMode_Bool,
+              ) ||
+                !!VRHTML.VRProperties.GetBoolProperty(
+                  _,
+                  _.Prop_SupportsVRGamepadMode_Bool,
+                ))
+            );
+          }
+          onToggleUseGamepadInput(_) {
+            var _;
+            const _ =
+              null === VRHTML || void 0 === VRHTML
+                ? void 0
+                : VRHTML.VRUtil.BAppIdFromSteamAppKey(
+                    null === (_ = this.state.currentBindingApp) || void 0 === _
+                      ? void 0
+                      : _.key,
+                  );
+            null != _ &&
+              _.Steam.SetAppVRInputPreference({
+                app_id: _,
+                prefers_steam_input: _,
+              }).catch(() => {});
+          }
           setAppState(_, _) {
             if (null != this.state.currentBindingApp) {
               let _ = {};
@@ -33189,7 +33608,28 @@ var CLSTAMP = "steamdb";
             }
           }
           render() {
-            var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
+            var _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _,
+              _;
             let _ =
                 null ===
                   (_ =
@@ -33277,7 +33717,30 @@ var CLSTAMP = "steamdb";
                   ? void 0
                   : _.supports_dominant_hand_setting) &&
                 null != this.state.eDominantHand,
-              _ = this.state.eDominantHand == _.TrackedControllerRole_RightHand;
+              _ = this.state.eDominantHand == _.TrackedControllerRole_RightHand,
+              _ =
+                null === VRHTML || void 0 === VRHTML
+                  ? void 0
+                  : VRHTML.VRUtil.BAppIdFromSteamAppKey(
+                      null === (_ = this.state.currentBindingApp) ||
+                        void 0 === _
+                        ? void 0
+                        : _.key,
+                    ),
+              _ =
+                null != _ &&
+                _ ==
+                  (null === (_ = this.m_sceneAppInputPreferenceAppIdListener) ||
+                  void 0 === _
+                    ? void 0
+                    : _.value) &&
+                _.HasCapability(41, _.MutualLocal) &&
+                this.supportsVRGamepadMode,
+              _ = _ && _.IsConnected(),
+              _ = !!(null === (_ = this.m_sceneAppPrefersSteamInputListener) ||
+              void 0 === _
+                ? void 0
+                : _.value);
             return this.shouldShowModal
               ? _.createElement(
                   _,
@@ -33353,6 +33816,29 @@ var CLSTAMP = "steamdb";
                           this.state.currentControllerType.resource_root,
                           this.state.currentControllerType.controller_type,
                         ),
+                      ),
+                    ),
+                  _ &&
+                    _.createElement(_, {
+                      label: _("#Settings_PreferSteamInput"),
+                      title: _("#Settings_PreferSteamInput_Description"),
+                      onChange: this.onToggleUseGamepadInput,
+                      value: _,
+                    }),
+                  _ &&
+                    !_ &&
+                    _ &&
+                    _.createElement(
+                      _,
+                      {
+                        className: "SettingsItem",
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: "Label",
+                        },
+                        _("#Settings_ControllersInGamepadMode"),
                       ),
                     ),
                   this.state.currentBindingApp &&
@@ -33469,6 +33955,7 @@ var CLSTAMP = "steamdb";
           (0, _._)([_], _.prototype, "close", null),
           (0, _._)([_], _.prototype, "showBindingCallouts", null),
           (0, _._)([_], _.prototype, "onToggleDominantHand", null),
+          (0, _._)([_], _.prototype, "onToggleUseGamepadInput", null),
           (_ = _ = (0, _._)([_._], _));
         const _ = (_) =>
           _.createElement(
@@ -34343,12 +34830,7 @@ var CLSTAMP = "steamdb";
           const _ = (0, _.useObserver)(
               () => _.Instance.SceneApplicationState != _.None,
             ),
-            _ = (0, _.useObserver)(() => {
-              if (_.Instance.SceneAppKey.startsWith(_)) {
-                const _ = Number.parseInt(_.Instance.SceneAppKey.substring(10));
-                if (Number.isInteger(_)) return _;
-              }
-            });
+            _ = (0, _.useObserver)(() => _.Instance.SceneAppID);
           return _(23, _.MutualLocal)
             ? null
             : _.createElement(
@@ -37460,6 +37942,38 @@ var CLSTAMP = "steamdb";
               )
             : _.createElement(_.Fragment, null, _);
         }
+        (0, _._)([_], _.prototype, "buildNode", null);
+        function _(_, _, _ = 0) {
+          var _, _, _, _;
+          if (!_ || _ > 8) return 0;
+          if (
+            (null !==
+              (_ =
+                null === (_ = _.offset) || void 0 === _
+                  ? void 0
+                  : _.z_pixels) && void 0 !== _
+              ? _
+              : 0) < 0 ||
+            (null !==
+              (_ =
+                null === (_ = _.offset) || void 0 === _
+                  ? void 0
+                  : _.z_meters) && void 0 !== _
+              ? _
+              : 0) < 0
+          )
+            return 0;
+          let _ = 0;
+          if (_.parent_overlay_key)
+            if (_.parent_overlay_key == _) _ += -0.5;
+            else {
+              const _ = _.requests.find(
+                (_) => _.popup_overlay_key == _.parent_overlay_key,
+              );
+              _ && (_ += _(_, _, _ + 1) + -0.1);
+            }
+          return 2 == _.special_sort_behavior && (_ += -0.1), _;
+        }
         function _(_) {
           return 1 == (null == _ ? void 0 : _.parent_enum) ? 0 : 0.03;
         }
@@ -37684,31 +38198,12 @@ var CLSTAMP = "steamdb";
               ? _
               : 1;
           const _ =
-              null !== (_ = null == _ ? void 0 : _.sort_order) && void 0 !== _
+              null !== (_ = null == _ ? void 0 : _.special_sort_behavior) &&
+              void 0 !== _
                 ? _
                 : 0,
             _ = 1 == _ ? 101 : void 0,
-            _ = (function (_) {
-              var _, _, _;
-              const _ =
-                  null !== (_ = null == _ ? void 0 : _.parent_overlay_key) &&
-                  void 0 !== _
-                    ? _
-                    : "",
-                _ =
-                  null !==
-                    (_ =
-                      null === (_ = null == _ ? void 0 : _.offset) ||
-                      void 0 === _
-                        ? void 0
-                        : _.z_pixels) && void 0 !== _
-                    ? _
-                    : 0;
-              return _ == (0, _.useObserver)(() => _.dashboardBarOverlayKey) &&
-                _ >= 0
-                ? -0.5
-                : 0;
-            })(_);
+            _ = (0, _.useObserver)(() => _(_, _.dashboardBarOverlayKey));
           let _ = !1,
             _ = !1;
           1 == _ && ((_ = !0), (_ = !0)),
@@ -37833,7 +38328,6 @@ var CLSTAMP = "steamdb";
             null != (null == _ ? void 0 : _.parent_overlay_key)
           );
         }
-        (0, _._)([_], _.prototype, "buildNode", null);
         (0, _._)((_) =>
           _.createElement(
             _.Fragment,
@@ -48377,6 +48871,7 @@ var CLSTAMP = "steamdb";
               (this.m_unMainSteamFrameID = void 0),
               (this.m_bSuppressingFadeExternal = !1),
               (this.m_bTrackingRecording = !1),
+              (this.m_bSteamStreamingToDevice = !1),
               (this.m_bKeyboardVisible = !1),
               (this.m_bKeyboardDockedInDashboard = !1),
               (this.m_sKeyboardOverlayKey = null),
@@ -48392,7 +48887,7 @@ var CLSTAMP = "steamdb";
           }
           Init() {
             return (0, _._)(this, void 0, void 0, function* () {
-              var _, _, _, _;
+              var _, _, _, _, _;
               yield this.LoadSessionDevData(),
                 (0, _.autorun)(() => this.SaveSessionDevData()),
                 (0, _.autorun)(this.updateBodyClasses),
@@ -48408,6 +48903,20 @@ var CLSTAMP = "steamdb";
                   VRHTML.RegisterForTrackingRecordingChangedEvents(
                     this.onTrackingRecordingChanged,
                   ),
+                (this.m_bSteamStreamingToDevice =
+                  null !==
+                    (_ =
+                      null === VRHTML || void 0 === VRHTML
+                        ? void 0
+                        : VRHTML.VRPathProperties.GetBoolPathProperty(_)) &&
+                  void 0 !== _ &&
+                  _),
+                null === VRHTML ||
+                  void 0 === VRHTML ||
+                  VRHTML.VRPathProperties.RegisterForBoolPathPropertyChangedEvents(
+                    _,
+                    this.onSteamStreamingToDeviceChanged,
+                  ),
                 null ===
                   (_ =
                     null === VRHTML || void 0 === VRHTML
@@ -48421,14 +48930,14 @@ var CLSTAMP = "steamdb";
                       ? void 0
                       : VRHTML.RegisterForSystemBehaviorFlags) ||
                   void 0 === _ ||
-                  _.call(VRHTML, this.onSystemBehaviorFlags),
+                  __webpack_require__.call(VRHTML, this.onSystemBehaviorFlags),
                 null ===
                   (_ =
                     null === VRHTML || void 0 === VRHTML
                       ? void 0
                       : VRHTML.RegisterForStandingZeroPoseReset) ||
                   void 0 === _ ||
-                  __webpack_require__.call(VRHTML, () => {
+                  _.call(VRHTML, () => {
                     this.m_nStandingZeroPoseResetGeneration += 1;
                   }),
                 null ===
@@ -49002,6 +49511,9 @@ var CLSTAMP = "steamdb";
           onTrackingRecordingChanged(_) {
             this.m_bTrackingRecording = _;
           }
+          onSteamStreamingToDeviceChanged(_) {
+            this.m_bSteamStreamingToDevice = _;
+          }
           onSystemBehaviorFlags(_) {
             _ != this.m_nSystemBehaviorFlags &&
               (this.m_nSystemBehaviorFlags = _);
@@ -49242,6 +49754,12 @@ var CLSTAMP = "steamdb";
             void 0,
           ),
           (0, _._)([_.observable], _.prototype, "m_bTrackingRecording", void 0),
+          (0, _._)(
+            [_.observable],
+            _.prototype,
+            "m_bSteamStreamingToDevice",
+            void 0,
+          ),
           (0, _._)([_.observable], _.prototype, "m_bKeyboardVisible", void 0),
           (0, _._)(
             [_.observable],
@@ -49366,6 +49884,12 @@ var CLSTAMP = "steamdb";
             [_.action.bound],
             _.prototype,
             "onTrackingRecordingChanged",
+            null,
+          ),
+          (0, _._)(
+            [_.action.bound],
+            _.prototype,
+            "onSteamStreamingToDeviceChanged",
             null,
           ),
           (0, _._)(
@@ -53228,7 +53752,7 @@ var CLSTAMP = "steamdb";
             }),
             _.createElement(_, {
               label: _("#Settings_VersionInfo_WebpackBuildTime"),
-              value: new Date(1790891877e3).toLocaleString() + "",
+              value: new Date(1791581002e3).toLocaleString() + "",
             }),
             _.createElement(_, {
               label: _("#Settings_VersionInfo_SteamVRHmdTrackingInfo"),
@@ -56075,6 +56599,24 @@ var CLSTAMP = "steamdb";
                       ],
                     }),
                   this.schemaComponents,
+                  (null === VRHTML || void 0 === VRHTML
+                    ? void 0
+                    : VRHTML.IsSteamFrame()) &&
+                    _.createElement(_, {
+                      name: "/settings/steamvr/proxThresholdMode",
+                      label: _("#Settings_PresenceSensor"),
+                      explainer: _("#Settings_PresenceSensor_Explainer"),
+                      items: [
+                        {
+                          value: _.Default,
+                          sLabel: _("#Settings_PresenceSensor_Normal"),
+                        },
+                        {
+                          value: _.Sensitive,
+                          sLabel: _("#Settings_PresenceSensor_HighSensitivity"),
+                        },
+                      ],
+                    }),
                   _.createElement(_, null),
                   this.makeResetToDefaultButton(),
                 )

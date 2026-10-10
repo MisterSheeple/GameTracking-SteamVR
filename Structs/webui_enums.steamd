@@ -783,6 +783,12 @@ enum UnnamedEnum9135bed59314e874
 	Full = 2;
 }
 
+enum UnnamedEnum915842328cb026e7
+{
+	Default = 0;
+	Sensitive = 1;
+}
+
 enum UnnamedEnum91e6ed4ffa72118e
 {
 	SceneAppNominal = 0;

@@ -2540,10 +2540,14 @@ var CLSTAMP = "steamdb";
         }
         SaveCurrentBinding(_, _, _) {
           return (0, _._)(this, void 0, void 0, function* () {
+            var _;
             this.HasUnboundActions,
               (this.m_sName = _),
               (this.m_sDescription = _);
-            let _ = this.m_sInteractionProfile.trim(),
+            let _ =
+                null === (_ = this.m_sInteractionProfile) || void 0 === _
+                  ? void 0
+                  : _.trim(),
               _ = {
                 app_key: this.SelectedApp,
                 controller_type:

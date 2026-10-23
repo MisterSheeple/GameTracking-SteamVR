@@ -24,5 +24,6 @@ jobs:
             contents: write
             statuses: write
         uses: MisterSheeple/gametracking/.github/workflows/gametracking.yml@master
+        secrets: inherit
         with:
           reset-gametracking: ${{ inputs.reset-gametracking }}

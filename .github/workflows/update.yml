@@ -23,10 +23,7 @@ jobs:
         permissions:
             contents: write
             statuses: write
-        uses: steamtracking/gametracking/.github/workflows/gametracking.yml@master
+        uses: MisterSheeple/gametracking/.github/workflows/gametracking.yml@master
         secrets: inherit
         with:
-          branch: ${{ github.event.inputs.branch }}
-          appid: 250820
-          save-manifest: true
           reset-gametracking: ${{ inputs.reset-gametracking }}
